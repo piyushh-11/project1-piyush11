@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="modern.css">
     <title>AI-generated Page</title>
 </head>
-<body>
-    
+
+<body style="font-family: Arial; text-align: center; background-color: #f0f0f0; margin: 0; min-height: 100vh">
+    <div style="max-width: 800px; margin: 0 auto; padding: 30px">
+        <h1 style="color: #2c3e50; font-size: 2.5rem; margin-bottom: 30px">
+            Cookies: <span id="score" style="font-size: 3rem">0</span>
+        </h1>
+
+        <img src="Assets/cookie.png" alt="Cookie" 
+             style="width: 200px; cursor: pointer; 
+                    transition: transform 0.1s; margin: 20px;
+                    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1))"
+             onclick="addToScore()" 
+             onmousedown="this.style.transform = 'scale(0.95)'"
+             onmouseup="this.style.transform = 'scale(1)'">
+
+        <div style="margin: 30px; padding: 20px; background: white; 
+                   border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1)">
+            <h3 style="color: #27ae60; font-size: 1.8rem; margin: 0 0 20px 0">Shop</h3>
+            
+            <button id="multiplierButton"
+                    style="padding: 12px 25px; margin: 10px; background: #3498db; 
+                          color: white; border: none; border-radius: 8px;
+                          font-size: 1.1rem; cursor: pointer;
+                          transition: transform 0.2s"
+                    onclick="buyUpgrade()"
+                    onmouseover="this.style.transform = 'scale(1.05)'"
+                    onmouseout="this.style.transform = 'scale(1)'">
+                🚀 Buy 2x Multiplier (10 cookies)
+            </button>
+        </div>
+
+        <div style="margin-top: 40px; color: #7f8c8d; font-size: 1.2rem">
+            <p>Click the cookie to earn points!</p>
+            <p>Current multiplier: <span id="multiplier" style="font-weight: bold">1</span>x</p>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        let baseMultiplier = 1;
+        let purchasedMultipliers = 1;
+        let currentCost = 10; // Initial cost
+        const costMultiplier = 1.5; // Price increase factor
+
+        function addToScore() {
+            score += baseMultiplier * purchasedMultipliers;
+            updateDisplay();
+        }
+
+        function buyUpgrade() {
+            if (score >= currentCost) {
+                score -= currentCost;
+                purchasedMultipliers *= 2; // Double the multiplier
+                currentCost = Math.round(currentCost * costMultiplier); // Increase price
+                updateDisplay();
+                updateButtonText();
+                document.getElementById('multiplier').textContent = 
+                    baseMultiplier * purchasedMultipliers;
+            } else {
+                alert('Not enough cookies!');
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('score').textContent = score;
+        }
+
+        function updateButtonText() {
+            document.getElementById('multiplierButton').innerHTML = 
+                `🚀 Buy 2x Multiplier (${currentCost} cookies)`;
+        }
+    </script>
 </body>
+
 </html>
