@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.navbutton {
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 15px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbutton.active {
+    font-weight: bold;
+}
