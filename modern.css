@@ -98,3 +98,61 @@ p {
     font-weight: 400;
     letter-spacing: 0.025em;
 }
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+}
+
+.project img {
+    width: 50%;
+    height: 50%;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tool {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    width: 5rem;
+    text-align: center;
+}
+
+.qualification {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    border: #d1d5db;
+}
+
+.skills {
+    width: 50%;
+    border: #d1d5db;
+}
+
+iframe {
+    width: 640px;
+    height: 750px;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
