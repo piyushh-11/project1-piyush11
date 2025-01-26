@@ -9,6 +9,16 @@
 </head>
 
 <body style="font-family: Arial; text-align: center; background-color: #f0f0f0; margin: 0; min-height: 100vh">
+    <nav style="background-color: #f0f0f0; padding: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 25px; justify-content: center;">
+            <li><a href="index.html" style="text-decoration: none; color: #2c3e50; font-weight: 500; padding: 8px 15px; border-radius: 8px; transition: all 0.2s ease;">Home</a></li>
+            <li><a href="portfolio.html" style="text-decoration: none; color: #2c3e50; font-weight: 500; padding: 8px 15px; border-radius: 8px; transition: all 0.2s ease;">Portfolio</a></li>
+            <li><a href="qualifications.html" style="text-decoration: none; color: #2c3e50; font-weight: 500; padding: 8px 15px; border-radius: 8px; transition: all 0.2s ease;">Qualifications</a></li>
+            <li><a href="service.html" style="text-decoration: none; color: #2c3e50; font-weight: 500; padding: 8px 15px; border-radius: 8px; transition: all 0.2s ease;">Service</a></li>
+            <li><a href="genai.html" style="background-color: #e3f2fd; color: #2196F3; font-weight: bold; padding: 8px 15px; border-radius: 8px; text-decoration: none; box-shadow: 0 2px 4px rgba(33,150,243,0.2);">AI</a></li>
+        </ul>
+    </nav>
+
     <div style="max-width: 800px; margin: 0 auto; padding: 30px">
         <h1 style="color: #2c3e50; font-size: 2.5rem; margin-bottom: 30px">
             Cookies: <span id="score" style="font-size: 3rem">0</span>
@@ -53,11 +63,10 @@
                     <li>A score counter that increases with each click</li>
                     <li>A shop to buy multipliers (e.g., 2x per click)</li>
                 </ol>
+                <p>Also add a nav bar at the top for the following pages: Home, Portfolio, Qualifications, Service, and AI. This page will be the AI page.</p>
             </div>
         </div>
     </div>
-
-    
 
     <script>
         let score = 0;
