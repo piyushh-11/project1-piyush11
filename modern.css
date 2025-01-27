@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: row;
     padding-left: 9rem;
+    position: sticky;
+    padding-top: 10px;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
 }
 
 nav {
@@ -26,7 +31,7 @@ nav {
     border-radius: 10px;
     color: black;
     font-size: 16px;
-    margin: 0 15px;
+    margin: 0 10px;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -83,12 +88,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem 20rem;
-    gap: 5rem;
+    margin: 0 15rem;
+    margin-top: 3rem;
+    gap: 3rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.025em;
 }
@@ -119,14 +125,14 @@ p {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .tool {
     background-color: lightgray;
     padding: 10px;
     border-radius: 10px;
-    width: 5rem;
+    width: 4.5rem;
     text-align: center;
 }
 
@@ -145,7 +151,7 @@ p {
 
 iframe {
     width: 640px;
-    height: 750px;
+    height: 708px;
     border: 1px solid #d1d5db;
     border-radius: 0.25rem;
 }
@@ -154,5 +160,12 @@ iframe {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 2rem;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
 }
